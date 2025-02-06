@@ -10,6 +10,7 @@ def download_audio(youtube_url):
     ydl_opts = {
         'format': 'bestaudio/best',
         'outtmpl': f"{DOWNLOAD_FOLDER}/%(title)s.%(ext)s",  # WEBM olarak kaydet
+        'geo_bypass': True  # 
     }
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
